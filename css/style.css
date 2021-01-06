@@ -23,7 +23,7 @@ body[data-char="ragirl"] {
   perspective: 1000px;
 }
 
-.stage {
+.stage {　
   position: absolute;
   left: 0;
   top: 0;
@@ -35,16 +35,27 @@ body[data-char="ragirl"] {
 .house {
   width: 100vw;
   height: 100vh;
+  transform: translateZ(-490vw);
   transform-style: preserve-3d;
 }
 
 .wall {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 0; 
   width: 100vw;
   height: 100vh;
   background: rgba(255, 255, 255, 0.8);
+}
+
+.wall-left { 
+  width: 1000vw;
+  transform: rotateY(90deg) translateZ(-500vw);
+}
+
+.wall-right { 
+  width: 1000vw;
+  transform: rotateY(90deg) translateZ(-400vw);
 }
 
 .wall-content {
