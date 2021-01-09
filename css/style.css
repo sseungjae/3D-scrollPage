@@ -23,7 +23,7 @@ body[data-char="ragirl"] {
   perspective: 1000px;
 }
 
-.stage {　
+.stage {
   position: absolute;
   left: 0;
   top: 0;
@@ -42,28 +42,36 @@ body[data-char="ragirl"] {
 .wall {
   position: absolute;
   left: 0;
-  top: 0; 
+  top: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(255, 255, 255, 0.8);
 }
 
-.wall-left { 
+.wall-left {
   background: #f8f8f8;
   width: 1000vw;
   transform: rotateY(90deg) translateZ(-500vw);
 }
 
-.wall-right { 
+.wall-right {
   background: #f8f8f8;
   width: 1000vw;
   transform: rotateY(90deg) translateZ(-400vw);
 }
 
-.wall-front-a{ transform: translateZ(300vw);}
-.wall-front-b{ transform: translateZ(50vw);}
-.wall-front-c{ transform: translateZ(-20vw);}
-.wall-front-d{ transform: translateZ(-500vw);}
+.wall-front-a {
+  transform: translateZ(300vw);
+}
+.wall-front-b {
+  transform: translateZ(50vw);
+}
+.wall-front-c {
+  transform: translateZ(-20vw);
+}
+.wall-front-d {
+  transform: translateZ(-500vw);
+}
 .wall-content {
   display: flex;
   align-items: center;
