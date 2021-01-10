@@ -17,6 +17,10 @@
         barElem.style.width = scrollPer * 100 + '%';
     });
  
+    window.addEventListener('mousemove', function(e) {
+        console.log(e.clientX, e.clientY);
+    })
+
     window.addEventListener('resize', resizeHandler);
     resizeHandler();
 
