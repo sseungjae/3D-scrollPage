@@ -2,6 +2,7 @@
      
     const houseElem = document.querySelector('.house');
     const barElem = document.querySelector('.progress-bar');
+    const mousePos = {x: 0, y: 0};
     let maxScrollValue;
  
     function resizeHandler(){
@@ -18,7 +19,9 @@
     });
  
     window.addEventListener('mousemove', function(e) {
-        console.log(e.clientX, e.clientY);
+        mousePos.x = -1 +(e.clientX / window.innerWidth) * 2;
+        mousePos.y = 1 +(e.clientY / window.innerHeight) * 2;
+        console.log(mousePos);
     })
 
     window.addEventListener('resize', resizeHandler);

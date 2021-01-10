@@ -6,7 +6,7 @@ body {
     "Malgun Gothic", sans-serif;
   -webkit-overflow-scrolling: touch;
   color: #555;
-  background: #fff000;
+  background: #343333c1;
   transition: background 0.5s;
 }
 body[data-char="ragirl"] {
