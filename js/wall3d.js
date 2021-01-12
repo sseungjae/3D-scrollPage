@@ -27,9 +27,10 @@
     window.addEventListener('resize', resizeHandler);
 
     stageElem.addEventListener('click', function(e){
-        console.log(e.clientX);
-        new Character();
-    })
+        new Character({
+            xPos: e.clientX / window.innerWidth * 100
+        });
+    });
 
     resizeHandler();
 
