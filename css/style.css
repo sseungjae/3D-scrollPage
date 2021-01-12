@@ -67,7 +67,7 @@ body[data-char="ragirl"] {
   transform: translateZ(50vw);
 }
 .wall-front-c {
-  transform: translateZ(-20vw);
+  transform: translateZ(-200vw);
 }
 .wall-front-d {
   transform: translateZ(-500vw);

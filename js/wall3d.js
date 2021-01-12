@@ -25,7 +25,12 @@
     })
 
     window.addEventListener('resize', resizeHandler);
+
+    stageElem.addEventListener('click', function(e){
+        console.log(e.clientX);
+        new Character();
+    })
+
     resizeHandler();
 
-    new Character();
 })();
