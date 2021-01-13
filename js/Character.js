@@ -30,4 +30,18 @@ function Character(info){
     document.querySelector('.stage').appendChild(this.mainElem);
 
     this.mainElem.style.left = info.xPos + '%';
+    this.init();
 }
+
+Character.prototype = {
+    consturctor: Character,
+    init: function(){
+        const self = this;
+
+        window.addEventListener('scroll', function() {
+            self.mainElem.classList.add('running');
+        });
+
+        // window.removeEventListener('')
+    }
+};
