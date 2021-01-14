@@ -33,7 +33,7 @@ function Character(info){
 
     //스크롤 중인지 아닌지 체크
     this.scrollState = false; //기본으로 false값을 가진다
-
+    this.lastScrollTop = 0;
     this.init();
 }
 
@@ -54,7 +54,17 @@ Character.prototype = {
                 self.scrollState = false;
                 self.mainElem.classList.remove('running');
             }, 500);
-            console.log(self.scrollState);
+
+            //이전 스크롤 위치와 현재 스크롤 위치를 비교
+            if (self.lastScrollTop > pageYOffset) {
+                //이전 스크롤 위치가 크다면 ->스크롤 올리고 있다 -> 캐릭터 얼굴이 보인다.
+                self.mainElem.setAttribute('data-direction', 'backward');
+            } else {
+                //현재 스크롤 위치가 크다면 ->스크롤 내리고 있다 -> 캐릭터 뒤통수가 보인다. 
+                self.mainElem.setAttribute('data-direction', 'forward');
+            }
+
+            self.lastScrollTop = pageYOffset;
         });
 
         // window.removeEventListener('')
