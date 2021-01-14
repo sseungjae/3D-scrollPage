@@ -52,7 +52,7 @@ Character.prototype = {
             self.scrollState = setTimeout(function() {
                 self.scrollState = false;
                 self.mainElem.classList.remove('running');
-            });
+            }, 500);
             console.log(self.scrollState);
         });
 
