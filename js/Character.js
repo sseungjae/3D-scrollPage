@@ -43,6 +43,7 @@ Character.prototype = {
         const self = this;
 
         window.addEventListener('scroll', function() {
+            clearTimeout(self.scrollState);
 
             if(!self.scrollState){
                 self.mainElem.classList.add('running');
