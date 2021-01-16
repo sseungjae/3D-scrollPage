@@ -74,7 +74,11 @@ Character.prototype = {
                 self.mainElem.classList.add('running');
             } else if (e.keyCode == 39) {
                 self.mainElem.setAttribute('data-direction', 'right');
+                self.mainElem.classList.add('running');
             }
+        });
+        window.addEventListener('keyup', function(e) {
+            self.mainElem.classList.remove('running');
         })
     }
 };
