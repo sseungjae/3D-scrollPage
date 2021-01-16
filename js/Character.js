@@ -56,6 +56,7 @@ Character.prototype = {
             }, 500);
 
             //이전 스크롤 위치와 현재 스크롤 위치를 비교
+            //마지막 스크롤 위치 > 현재의 스크롤 위치
             if (self.lastScrollTop > pageYOffset) {
                 //이전 스크롤 위치가 크다면 ->스크롤 올리고 있다 -> 캐릭터 얼굴이 보인다.
                 self.mainElem.setAttribute('data-direction', 'backward');
@@ -67,6 +68,13 @@ Character.prototype = {
             self.lastScrollTop = pageYOffset;
         });
 
-        // window.removeEventListener('')
+        window.addEventListener('keydown', function(e){
+            if (e.keyCode == 37) {
+                self.mainElem.setAttribute('data-direction', 'left');
+                self.mainElem.classList.add('running');
+            } else if (e.keyCode == 39) {
+                self.mainElem.setAttribute('data-direction', 'right');
+            }
+        })
     }
 };
