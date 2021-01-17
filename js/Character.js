@@ -99,11 +99,18 @@ Character.prototype = {
     },
     run: function(self){
         //const self = this;
-
+        
         if (self.direction == 'left') {
             self.xPos -= self.speed;
         }else if (self.direction == 'right') {
             self.xPos += self.speed;
+        }
+
+        if (self.xPos < 2) {
+            self.xPos = 2;
+        }
+        if (self.xPos > 88) {
+            self.xPos = 88;
         }
         self.mainElem.style.left = self.xPos + '%';
 
