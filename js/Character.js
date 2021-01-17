@@ -94,6 +94,7 @@ Character.prototype = {
         window.addEventListener('keyup', function(e) {
             self.mainElem.classList.remove('running');
             cancelAnimationFrame(self.rafId);
+            self.runningState = false;
         });
     },
     run: function(self){

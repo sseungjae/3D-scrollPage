@@ -5,6 +5,15 @@
   }
 }
 
+@keyframes ani-arm {
+  from {
+    transform: rotateY(10deg);
+  }
+  to {
+    transform: rotateY(-10deg);
+  }
+}
+
 @keyframes ani-running-leg {
   from {
     transform: rotateX(-30deg);
@@ -254,6 +263,11 @@ body[data-char="ragirl"] {
 .character.running .character-arm {
   animation: ani-running-arm 0.2s alternate infinite linear;
 }
+.character .character-arm {
+  animation: ani-arm 0.6s infinite alternate
+    cubic-bezier(0.46, 0.18, 0.66, 0.93);
+}
+
 body[data-char="ragirl"] .character {
   width: 12vw;
   height: calc(12vw * 1.4135);
