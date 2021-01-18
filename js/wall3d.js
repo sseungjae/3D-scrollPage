@@ -28,7 +28,8 @@
 
     stageElem.addEventListener('click', function(e){
         new Character({
-            xPos: e.clientX / window.innerWidth * 100
+            xPos: e.clientX / window.innerWidth * 100,
+            speed: Math.random() * 0.4 + 0.2 //캐릭터가 생성될 때 랜덤하게 캐릭터의 스피드를 정한다.
         });
     });
 

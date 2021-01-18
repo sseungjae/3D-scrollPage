@@ -36,7 +36,7 @@ function Character(info){
     this.lastScrollTop = 0; //바로 이전 스크롤 위치
     this.xPos = info.xPos;
     this.direction;
-    this.speed = 0.3;
+    this.speed = info.speed;
     this.runningState; //좌우 이동 중인지 확인하는
     this.rafId;
     this.init();
@@ -107,10 +107,10 @@ Character.prototype = {
         }
 
         if (self.xPos < 2) {
-            self.xPos = 2;
+            self.xPos = 2; //x좌표가 2보다 작으면 2로 고정해준다.
         }
         if (self.xPos > 88) {
-            self.xPos = 88;
+            self.xPos = 88; //x좌표가 88보다 크면 88로 고정해준다.
         }
         self.mainElem.style.left = self.xPos + '%';
 
